@@ -24,10 +24,18 @@ namespace AvaliacaoTecnica2.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lstProdutos.Items.Clear();
-            Classes.Produto newProduto = new Classes.Produto(txtNome.Text, double.Parse(txtValor.Text));
-            newProduto.CadastrarProduto();
-            lstProdutos.Items.AddRange(Classes.Produto.Produtos.ToArray());
+            try
+            {
+                lstProdutos.Items.Clear();
+                Classes.Produto newProduto = new Classes.Produto(txtNome.Text, double.Parse(txtValor.Text));
+                newProduto.CadastrarProduto();
+                lstProdutos.Items.AddRange(Classes.Produto.Produtos.ToArray());
+            }catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message, "ATENÇÃO");
+                lstProdutos.Items.AddRange(Classes.Produto.Produtos.ToArray());
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

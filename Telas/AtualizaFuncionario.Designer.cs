@@ -139,6 +139,7 @@
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtNome);
             this.Name = "AtualizaFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AtualizaFuncionario";
             this.Load += new System.EventHandler(this.AtualizaFuncionario_Load);
             this.ResumeLayout(false);

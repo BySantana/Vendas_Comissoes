@@ -108,6 +108,7 @@
             this.Controls.Add(this.lsbClientes);
             this.Controls.Add(this.lsbFuncionarios);
             this.Name = "Repositorios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repositorios";
             this.Load += new System.EventHandler(this.Repositorios_Load);
             this.ResumeLayout(false);
